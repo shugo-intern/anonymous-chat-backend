@@ -21,7 +21,7 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = 3001; // サーバが動くポート番号
+const PORT = process.env.PORT || 3001; // サーバが動くポート番号
 http.listen(PORT, () => {
   console.log(`サーバがポート${PORT}で起動しました`);
 });
